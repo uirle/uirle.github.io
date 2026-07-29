@@ -102,8 +102,12 @@ img { max-width: 100%; height: auto; display: block; }
   letter-spacing: -0.03em; color: var(--black);
 }
 .nav-logo img {
-  height: 44px; width: auto; border-radius: 10px;
+  height: 44px; width: auto; border-radius: 10px; flex-shrink: 0;
 }
+.nav-logo-text { display: flex; flex-direction: column; gap: 2px; line-height: 1.2; }
+.nav-logo-sub { font-size: 0.68rem; font-weight: 400; color: var(--mid-gray); letter-spacing: 0; }
+.nav-logo-sub a { color: var(--accent); }
+.nav-logo-sub a:hover { text-decoration: underline; }
 .nav-links { display: flex; align-items: center; gap: 32px; }
 .nav-links a {
   font-size: 0.85rem; font-weight: 500; color: var(--mid-gray);
@@ -633,7 +637,10 @@ img { max-width: 100%; height: auto; display: block; }
   <div class="nav-inner">
     <a href="#" class="nav-logo">
       <img src="https://fengzi.eu.org/image/6f85fbbb-c6dd-47ed-9894-faf8ee723867.webp" alt="精选账号商城">
-      精选账号商城
+      <div class="nav-logo-text">
+        精选账号商城
+        <div class="nav-logo-sub">新商城网址：<a href="https://hltx.eu.cc" target="_blank" rel="noopener">https://hltx.eu.cc</a></div>
+      </div>
     </a>
     <div class="nav-links">
       <a href="#products">全部商品</a>

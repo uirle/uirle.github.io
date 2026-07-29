@@ -89,7 +89,7 @@ img { max-width: 100%; height: auto; display: block; }
 .nav.scrolled { background: rgba(255,255,255,0.95); border-bottom-color: var(--warm-gray); box-shadow: 0 1px 8px rgba(0,0,0,0.04); }
 .nav-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); height: 100%; display: flex; align-items: center; justify-content: space-between; }
 .nav-logo { display: flex; align-items: center; gap: 12px; font-family: 'Inter', sans-serif; font-weight: 800; font-size: 1.1rem; letter-spacing: -0.03em; color: var(--black); }
-.nav-logo img { height: 44px; width: auto; border-radius: 10px; }
+.nav-logo img { height: 44px; width: auto; border-radius: 10px; flex-shrink: 0; } .nav-logo-text { display: flex; flex-direction: column; gap: 2px; line-height: 1.2; } .nav-logo-sub { font-size: 0.68rem; font-weight: 400; color: var(--mid-gray); letter-spacing: 0; } .nav-logo-sub a { color: var(--accent); } .nav-logo-sub a:hover { text-decoration: underline; }
 .nav-links { display: flex; align-items: center; gap: 32px; }
 .nav-links a { font-size: 0.85rem; font-weight: 500; color: var(--mid-gray); letter-spacing: 0.01em; transition: color 0.3s; position: relative; }
 .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--accent); transition: width 0.3s var(--ease-out); }
@@ -393,7 +393,10 @@ function main() {
   <div class="nav-inner">
     <a href="#" class="nav-logo">
       <img src="${esc(fixImg(meta.siteLogo || '', siteUrl))}" alt="${esc(siteName)}">
-      ${esc(siteName)}
+      <div class="nav-logo-text">
+        ${esc(siteName)}
+        <div class="nav-logo-sub">新商城网址：<a href="https://hltx.eu.cc" target="_blank" rel="noopener">https://hltx.eu.cc</a></div>
+      </div>
     </a>
     <div class="nav-links">
       <a href="#products">全部商品</a>
