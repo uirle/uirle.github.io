@@ -89,7 +89,7 @@ img { max-width: 100%; height: auto; display: block; }
 .nav.scrolled { background: rgba(255,255,255,0.95); border-bottom-color: var(--warm-gray); box-shadow: 0 1px 8px rgba(0,0,0,0.04); }
 .nav-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); height: 100%; display: flex; align-items: center; justify-content: space-between; }
 .nav-logo { display: flex; align-items: center; gap: 12px; font-family: 'Inter', sans-serif; font-weight: 800; font-size: 1.1rem; letter-spacing: -0.03em; color: var(--black); }
-.nav-logo img { width: 36px; height: 36px; border-radius: 10px; object-fit: cover; }
+.nav-logo img { height: 44px; width: auto; border-radius: 10px; }
 .nav-links { display: flex; align-items: center; gap: 32px; }
 .nav-links a { font-size: 0.85rem; font-weight: 500; color: var(--mid-gray); letter-spacing: 0.01em; transition: color 0.3s; position: relative; }
 .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--accent); transition: width 0.3s var(--ease-out); }
