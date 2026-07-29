@@ -88,8 +88,7 @@ img { max-width: 100%; height: auto; display: block; }
 .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; height: 72px; background: rgba(250,250,248,0.85); backdrop-filter: blur(20px) saturate(1.8); -webkit-backdrop-filter: blur(20px) saturate(1.8); border-bottom: 1px solid transparent; transition: all 0.4s var(--ease); }
 .nav.scrolled { background: rgba(255,255,255,0.95); border-bottom-color: var(--warm-gray); box-shadow: 0 1px 8px rgba(0,0,0,0.04); }
 .nav-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); height: 100%; display: flex; align-items: center; justify-content: space-between; }
-.nav-logo { display: inline-flex; align-items: flex-start; gap: 0; font-family: 'Inter', sans-serif; font-weight: 800; font-size: 1.1rem; letter-spacing: -0.03em; color: var(--black); text-decoration: none; }
-.nav-logo img { height: 50px; width: 50px; border-radius: 12px; flex-shrink: 0; object-fit: cover; object-position: center; } .nav-logo-text { display: flex; flex-direction: column; gap: 1px; line-height: 1.2; margin-left: -4px; } .nav-logo-sub { font-size: 0.65rem; font-weight: 400; color: var(--mid-gray); letter-spacing: 0; white-space: nowrap; } .nav-logo-sub a { color: var(--accent); font-weight: 500; } .nav-logo-sub a:hover { text-decoration: underline; }
+.nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; } .nav-brand > a { display: flex; flex-shrink: 0; } .nav-brand img { height: 48px; width: 48px; border-radius: 12px; object-fit: cover; } .nav-brand-text { display: flex; flex-direction: column; gap: 2px; line-height: 1.2; } .nav-brand-text > a { font-family: 'Inter', sans-serif; font-weight: 800; font-size: 1.05rem; letter-spacing: -0.03em; color: var(--black); text-decoration: none; } .nav-brand-text > a:hover { color: var(--accent); } .nav-brand-sub { font-size: 0.65rem; font-weight: 400; color: var(--mid-gray); white-space: nowrap; } .nav-brand-sub a { color: var(--accent); font-weight: 500; } .nav-brand-sub a:hover { text-decoration: underline; }
 .nav-links { display: flex; align-items: center; gap: 32px; }
 .nav-links a { font-size: 0.85rem; font-weight: 500; color: var(--mid-gray); letter-spacing: 0.01em; transition: color 0.3s; position: relative; }
 .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--accent); transition: width 0.3s var(--ease-out); }
@@ -391,13 +390,15 @@ function main() {
 
 <nav class="nav" id="nav">
   <div class="nav-inner">
-    <a href="#" class="nav-logo">
-      <img src="${esc(fixImg(meta.siteLogo || '', siteUrl))}" alt="${esc(siteName)}">
-      <div class="nav-logo-text">
-        ${esc(siteName)}
-        <div class="nav-logo-sub">新商城网址：<a href="https://hltx.eu.cc" target="_blank" rel="noopener">https://hltx.eu.cc</a></div>
+    <div class="nav-brand">
+      <a href="#">
+        <img src="${esc(fixImg(meta.siteLogo || '', siteUrl))}" alt="${esc(siteName)}">
+      </a>
+      <div class="nav-brand-text">
+        <a href="#">${esc(siteName)}</a>
+        <div class="nav-brand-sub">新商城网址：<a href="https://hltx.eu.cc" target="_blank" rel="noopener">https://hltx.eu.cc</a></div>
       </div>
-    </a>
+    </div>
     <div class="nav-links">
       <a href="#products">全部商品</a>
       <a href="#features">为什么选择我们</a>
