@@ -88,7 +88,7 @@ img { max-width: 100%; height: auto; display: block; }
 .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; height: 72px; background: rgba(250,250,248,0.85); backdrop-filter: blur(20px) saturate(1.8); -webkit-backdrop-filter: blur(20px) saturate(1.8); border-bottom: 1px solid transparent; transition: all 0.4s var(--ease); }
 .nav.scrolled { background: rgba(255,255,255,0.95); border-bottom-color: var(--warm-gray); box-shadow: 0 1px 8px rgba(0,0,0,0.04); }
 .nav-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); height: 100%; display: flex; align-items: center; justify-content: space-between; }
-.nav-logo { display: flex; align-items: center; gap: 12px; font-family: 'Inter', sans-serif; font-weight: 800; font-size: 1.1rem; letter-spacing: -0.03em; color: var(--black); }
+.nav-logo { display: flex; align-items: center; gap: 8px; font-family: 'Inter', sans-serif; font-weight: 800; font-size: 1.1rem; letter-spacing: -0.03em; color: var(--black); }
 .nav-logo img { height: 44px; width: auto; border-radius: 10px; flex-shrink: 0; } .nav-logo-text { display: flex; flex-direction: column; gap: 2px; line-height: 1.2; } .nav-logo-sub { font-size: 0.68rem; font-weight: 400; color: var(--mid-gray); letter-spacing: 0; } .nav-logo-sub a { color: var(--accent); } .nav-logo-sub a:hover { text-decoration: underline; }
 .nav-links { display: flex; align-items: center; gap: 32px; }
 .nav-links a { font-size: 0.85rem; font-weight: 500; color: var(--mid-gray); letter-spacing: 0.01em; transition: color 0.3s; position: relative; }
